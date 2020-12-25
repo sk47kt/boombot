@@ -20,4 +20,3 @@ async def on_message(message):
         await message.channel.send('백종인[350] 수익률{0}%'.format(baek[2:4]))
         await message.channel.send('정성민[304] 수익률{0}%'.format(sung[2:4]))
         time.sleep(120)
-client.run('NzkxODUyMzkxMTAzNDYzNDY1.X-VMAQ.IUGjQ5Bok5vdrPo7f0deb_8_F4M')
