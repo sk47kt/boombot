@@ -14,10 +14,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('리플'):
-      while True:
         await message.channel.send('현재가 : {0}'.format(xrpprice))
         await message.channel.send('최근3일가격{0}'.format(df))
         await message.channel.send('백종인[350] 수익률{0}%'.format(baek[2:4]))
         await message.channel.send('정성민[304] 수익률{0}%'.format(sung[2:4]))
-        time.sleep(120)
 client.run(os.environ['token'])
