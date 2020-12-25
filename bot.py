@@ -14,6 +14,7 @@ async def on_message(message):
             df = pyupbit.get_ohlcv("KRW-XRP", count=3)
             sung=str(round(xrpprice/304,3))
             baek=str(round(xrpprice/350,3))
+            await message.channel.send(time.strftime('%c', time.localtime(time.time())))
             await message.channel.send('현재가격(5분갱신) : {0}'.format(xrpprice))
             await message.channel.send('최근3일가격{0}'.format(df))
             await message.channel.send('백종인[350] 수익률{0}%'.format(baek[2:4]))
