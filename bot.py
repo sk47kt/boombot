@@ -1,6 +1,7 @@
 import discord
 import pyupbit
 import time
+import os
 client = discord.Client()
 channel = client.get_channel(791857271776477184)
 xrpprice = pyupbit.get_current_price("KRW-XRP")
@@ -20,3 +21,4 @@ async def on_message(message):
         await message.channel.send('백종인[350] 수익률{0}%'.format(baek[2:4]))
         await message.channel.send('정성민[304] 수익률{0}%'.format(sung[2:4]))
         time.sleep(120)
+client.run(os.environ['token'])
