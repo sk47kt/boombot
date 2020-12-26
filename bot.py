@@ -2,7 +2,6 @@ import discord
 import pyupbit
 import time
 import os
-import asyncio
 xrpprice = pyupbit.get_current_price("KRW-XRP")
 df = pyupbit.get_ohlcv("KRW-XRP", count=3)
 sung_p=str(round(xrpprice/304,3))
@@ -15,7 +14,6 @@ channel = client.get_channel(791857271776477184)
 async def on_ready():
     print(f'{client.user} 에 로그인하였습니다!')
     
-
 @client.event
 async def on_message(message):
     if message.content.startswith('리플'):
