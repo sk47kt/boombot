@@ -10,11 +10,11 @@ sung_m=str(round(1-(xrpprice/304),3))
 baek_m=str(round(1-(xrpprice/354),3))
 client = discord.Client()
 channel = client.get_channel(791857271776477184)
-
 @client.event
 async def on_ready():
     print(f'{client.user} 에 로그인하였습니다!')
     
+
 @client.event
 async def on_message(message):
     if message.content.startswith('리플'):
