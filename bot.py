@@ -1,6 +1,7 @@
 import discord
 import pyupbit
 import time
+import os
 xrpprice = pyupbit.get_current_price("KRW-XRP")
 df = pyupbit.get_ohlcv("KRW-XRP", count=3)
 sung=str(round(xrpprice/304,3))
