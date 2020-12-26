@@ -29,5 +29,5 @@ async def on_message(message):
         await message.channel.send('정성민[304] 수익{0}%'.format(sung_p[2:4]))
       else:
         await message.channel.send('정성민[304] 손실{0}%'.format(sung_m[2:4]))
-      await asyncio.sleep(1800)
+      time.sleep(1800)
 client.run(os.environ['token'])
