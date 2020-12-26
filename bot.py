@@ -1,9 +1,7 @@
 import discord
-from discord.ext import commands
 import pyupbit
 import time
 import os
-bot = commands.Bot(command_prefix = prefix)
 xrpprice = pyupbit.get_current_price("KRW-XRP")
 df = pyupbit.get_ohlcv("KRW-XRP", count=3)
 sung_p=str(round(xrpprice/304,3))
@@ -12,10 +10,10 @@ sung_m=str(round(1-(xrpprice/304),3))
 baek_m=str(round(1-(xrpprice/354),3))
 client = discord.Client()
 channel = client.get_channel(791857271776477184)
+
 @client.event
 async def on_ready():
     print(f'{client.user} 에 로그인하였습니다!')
-    await bot.change_presence(activity=discord.Streaming(name = '빅샥', url='https://www.youtube.com/watch?v=3M_5oYU-IsU'))
     
 @client.event
 async def on_message(message):
