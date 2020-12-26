@@ -13,8 +13,8 @@ channel = client.get_channel(791857271776477184)
 @client.event
 async def on_ready():
     print(f'{client.user} 에 로그인하였습니다!')
+    await bot.change_presence(activity=discord.Streaming(name = '빅샥', url='https://www.youtube.com/watch?v=3M_5oYU-IsU'))
     
-
 @client.event
 async def on_message(message):
     if message.content.startswith('리플'):
